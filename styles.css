@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* border: 1px solid #ccc; */
+}
+
+body {
+    margin: 0 80px;
+    font-family: 'Inter', sans-serif;
+    background-color: #F1F5F8;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-weight: bold;
+}
+
+form {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input {
+    height: 25px;
+    border: none;
+    padding: 5px;
+}
+
+#pages {
+    max-width: 60px;
+}
+
+#author,
+#title {
+    min-width: 150px;
+}
+
+#read {
+    width: 25px;
+    height: 25px;
+}
+
+.table-container {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+table,
+input {
+    border: 1px lightgrey solid;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    max-width: 960px;
+}
+
+thead {
+    background-color: rgb(189, 189, 189);
+    height: 30px;
+    font-size: 0.85rem;
+}
+
+td {
+    border-bottom: 1px lightgrey solid;
+}
+
+tr {
+    height: 30px;
+}
+
+tbody>* {
+    font-size: 0.75rem;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+.remove-btn {
+    min-width: 40%;
+    height: 26px;
+    background-color: transparent;
+}
+
+.remove-btn .material-symbols-sharp {
+    font-size: 26px;
+    color: red;
+}
+
+.add-book .material-symbols-sharp {
+    font-size: 18px;
+}
+
+.add-book {
+    height: 40px;
+    min-width: 100px;
+    background-color: rgb(46, 46, 46);
+    border: 3px solid lime;
+    color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0 15px;
+
+}
+
+.remove-btn,
+.add-book,
+#read {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
