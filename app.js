@@ -1,3 +1,10 @@
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
+const read = document.getElementById("read");
+
+const addBookButton = document.querySelector(".add-book");
+
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -12,7 +19,19 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-	myLibrary.push(new Book("The Hobbit", "J.R.R. Tolkien", 295, false));
+	myLibrary.push(new Book(title.value, author.value, pages.value, read.checked));
+
+	resetInputs();
 }
 
-addBookToLibrary();
+addBookButton.addEventListener("click", (event) => {
+	event.preventDefault();
+	addBookToLibrary();
+});
+
+function resetInputs() {
+	title.value = "";
+	author.value = "";
+	pages.value = "";
+	read.checked = false;
+}

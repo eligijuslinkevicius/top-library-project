@@ -14,7 +14,7 @@
 	<body>
 		<h1>My book library</h1>
 
-		<form action="">
+		<form action="#" method="post">
 			<label for="title">Title</label>
 			<input type="text" name="title" id="title" placeholder="title" required />
 			<label for="author">Author</label>
@@ -22,8 +22,8 @@
 			<label for="pages">Pages</label>
 			<input type="number" name="pages" id="pages" placeholder="0" required />
 			<label for="read">Read</label>
-			<input type="checkbox" name="read" id="read" required />
-			<button type="button" class="add-book"><span class="material-symbols-sharp"> add_box </span> New book</button>
+			<input type="checkbox" name="read" id="read" />
+			<button type="submit" class="add-book"><span class="material-symbols-sharp"> add_box </span> New book</button>
 		</form>
 
 		<div class="table-container">
