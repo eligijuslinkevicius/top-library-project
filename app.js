@@ -1,9 +1,8 @@
 const form = document.querySelector("form");
-// TODO: add delete button and its functionality.
 const tableBody = document.querySelector(".table-body");
 const addBookButton = document.querySelector(".add-book");
 
-let myLibrary = [new Book("The Great Gatsby", "F. Scott Fitzgerald", 218, true)];
+let myLibrary = [];
 
 function resetInputs() {
 	form.reset();
@@ -66,6 +65,14 @@ function addBooksToTable() {
 
 		// Append the new row to the table body
 		tableBody.appendChild(newRow);
+
+		removeButton.addEventListener("click", () => {
+			// Remove the book from the myLibrary array
+			myLibrary.splice(i, 1);
+
+			// Remove the table row from the table body
+			tableBody.removeChild(newRow);
+		});
 	}
 }
 
