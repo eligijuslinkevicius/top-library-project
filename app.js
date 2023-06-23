@@ -49,6 +49,13 @@ function addBooksToTable() {
 		const readCell = document.createElement("td");
 		readCell.textContent = book.read ? "Yes" : "No";
 
+		const readCheckbox = document.createElement("input");
+		readCheckbox.className = "read-checkbox";
+		readCheckbox.type = "checkbox";
+
+		readCell.textContent === "Yes" ? (readCheckbox.checked = true) : (readCheckbox.checked = false);
+		readCell.appendChild(readCheckbox);
+
 		const statusCell = document.createElement("td");
 		const removeButton = document.createElement("button");
 		removeButton.type = "button";
@@ -72,6 +79,16 @@ function addBooksToTable() {
 
 			// Remove the table row from the table body
 			tableBody.removeChild(newRow);
+		});
+
+		readCheckbox.addEventListener("change", () => {
+			if (readCheckbox.checked) {
+				readCell.textContent = "Yes";
+				readCell.appendChild(readCheckbox);
+			} else {
+				readCell.textContent = "No";
+				readCell.appendChild(readCheckbox);
+			}
 		});
 	}
 }
