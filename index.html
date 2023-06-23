@@ -20,7 +20,7 @@
 			<label for="author">Author</label>
 			<input type="text" name="author" id="author" placeholder="author" required />
 			<label for="pages">Pages</label>
-			<input type="number" name="pages" id="pages" placeholder="0" required />
+			<input type="number" name="pages" id="pages" placeholder="0" required min="1" max="9999" value="1" />
 			<label for="read">Read</label>
 			<input type="checkbox" name="read" id="read" />
 			<button type="submit" class="add-book"><span class="material-symbols-sharp"> add_box </span> New book</button>
@@ -37,29 +37,11 @@
 						<th>Status</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="table-body">
 					<tr>
 						<td>The Great Gatsby</td>
 						<td>F. Scott Fitzgerald</td>
 						<td>218</td>
-						<td>Yes</td>
-						<td>
-							<button type="button" class="remove-btn"><span class="material-symbols-sharp"> delete </span></button>
-						</td>
-					</tr>
-					<tr>
-						<td>To Kill a Mockingbird</td>
-						<td>Harper Lee</td>
-						<td>324</td>
-						<td>No</td>
-						<td>
-							<button type="button" class="remove-btn"><span class="material-symbols-sharp"> delete </span></button>
-						</td>
-					</tr>
-					<tr>
-						<td>1984</td>
-						<td>George Orwell</td>
-						<td>328</td>
 						<td>Yes</td>
 						<td>
 							<button type="button" class="remove-btn"><span class="material-symbols-sharp"> delete </span></button>

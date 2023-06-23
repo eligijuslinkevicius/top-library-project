@@ -9,6 +9,7 @@
 body {
     margin: 0 80px;
     font-family: 'Inter', sans-serif;
+    font-display: fallback;
     background-color: #F1F5F8;
 }
 
